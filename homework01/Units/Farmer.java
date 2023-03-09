@@ -13,6 +13,7 @@ public Farmer(String name, int hp) {
     this.wisdom=8;
     this.charisma=8;
     this.className="Farmer";
+    this.arrival();
 }
 public Farmer() {
     this(Names.getRandName(),100);

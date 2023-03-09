@@ -20,11 +20,16 @@ public class Arbalester extends BaseUnit {
     public Arbalester() {
         this(Names.getRandName(),100);
     }
-    public void shooting(){
+    public void shooting(BaseUnit target){
+        if (this.arrows>0){
         this.arrows--;
-        System.out.println(this.className+" "+this.name+" стреляет...");
+        float damade=12+(float)this.dexterity/10*BaseUnit.diceRoll();
+        System.out.println(this.name+" стреляет в "+target.getName());
+        target.getDamage((int)damade);
+       }
+       else System.out.println("Стрелы закончились!");
     }
-
+    
     @Override
     public String getInfo() {
         String str=super.getInfo()+ " arrows "+this.arrows;

@@ -7,8 +7,9 @@ public class Sniper extends Arbalester{
     
     public Sniper(String name, int hp) {
         super(name, hp);
-        this.dexterity=14;
-        this.className="Sniper ";
+        this.dexterity=16;
+        this.className="Sniper";
+        this.arrival();
      
     }
 

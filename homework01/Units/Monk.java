@@ -9,10 +9,11 @@ public class Monk extends BaseUnit {
         this.strength=10;
         this.dexterity=8;
         this.viability=10;
-        this.intelligence=8;
-        this.wisdom=8;
-        this.charisma=8;
+        this.intelligence=12;
+        this.wisdom=14;
+        this.charisma=10;
         this.className="Monk";
+        this.arrival();
     }
 
     public Monk() {

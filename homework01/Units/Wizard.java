@@ -16,6 +16,8 @@ public class Wizard extends BaseUnit{
         this.charisma=10;
         this.maxMana=100;
         this.mana=this.maxMana;
+        this.className="Wizard"; 
+        this.arrival();
     }
     public Wizard() {
         this(Names.getRandName(),100);

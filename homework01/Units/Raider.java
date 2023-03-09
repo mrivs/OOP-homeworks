@@ -1,10 +1,29 @@
 package homework01.Units;
 
+import homework01.Names;
+
 public class Raider extends BaseUnit{
 
     public Raider(String name, int hp) {
         super(name, hp);
-        //TODO Auto-generated constructor stub
+        this.strength=12;
+        this.dexterity=14;
+        this.viability=10;
+        this.intelligence=10;
+        this.wisdom=10;
+        this.charisma=10;
+        this.className="Raider"; 
+        this.arrival();
+    }
+
+    public Raider() {
+        this(Names.getRandName(), 120);
+    }
+
+    public void daggerStrike(BaseUnit target){
+        float damade=10+(float)this.dexterity/10*(float)this.strength/10*BaseUnit.diceRoll();
+        System.out.println(this.name+" удар кинжалом "+target.getName());
+        target.getDamage((int)damade);
     }
     
 }

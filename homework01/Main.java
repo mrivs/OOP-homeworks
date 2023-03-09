@@ -21,13 +21,17 @@ public class Main {
         BaseUnit arb1=new Arbalester();
         Sniper sniper1=new Sniper();    
         Monk monk1=new Monk();
+        Raider raider1=new Raider();
+        Spearman spearman1=new Spearman();
+        Wizard wiz1=new Wizard();
 
         farm2.waiting();
         ((Farmer) farm1).working();
-        ((Arbalester) arb1).shooting();
-        farm1.getDamage(33);
-        System.out.println( farm1.getInfo());
-        monk1.Healing(farm1);
-        System.out.println( farm1.getInfo());
+        
+        
+        raider1.daggerStrike(sniper1);
+        System.out.println( sniper1.getInfo());
+        monk1.Healing(sniper1);
+        System.out.println( sniper1.getInfo());
     }
 }
