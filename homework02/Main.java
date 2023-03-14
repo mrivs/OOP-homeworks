@@ -21,6 +21,7 @@ public class Main {
 
         fillListHeroes(team1, 10);
         fillListHeroes(team2, 10);
+        
         System.out.println("Команда 1:");
         getListInfo(team1);
         System.out.println("Команда 2:");

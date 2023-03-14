@@ -6,9 +6,9 @@ import homework01.Names;
 
 public abstract class BaseUnit {
   /**
-   * @param strength     сила
-   * @param dexterity    ловкость
-   * @param viability    выносливость
+   * @param attack     сила
+   * @param deffense    ловкость
+   * @param damage    выносливость
    * @param intelligence интеллект
    * @param wisdom       мудрость
    * @param charisma     харизма

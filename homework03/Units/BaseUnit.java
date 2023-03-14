@@ -1,43 +1,38 @@
-package homework02.Units;
+package homework03.Units;
 
 import java.util.Random;
-import homework02.Names;
-import homework02.Interface.StepInfo;
+import homework03.Names;
+import homework03.Interface.StepInfo;
 
 public abstract class BaseUnit implements StepInfo {
   /**
-   * @param attack     сила
-   * @param deffense    ловкость
-   * @param damage    выносливость
-   * @param intelligence интеллект
-   * @param wisdom       мудрость
-   * @param charisma     харизма
+   * @param attack   атака
+   * @param defence  защита
+   * @param damage   урон
+
    */
 
-  protected int strength;
-  protected int dexterity;
-  protected int viability;
-  protected int intelligence;
-  protected int wisdom;
-  protected int charisma;
+  protected int attack;
+  protected int defence;
+  protected int[] damage=new int[2];
+
 
   protected int hp;
   protected int maxHp;
   protected String name;
-  protected String speed;
+  protected int speed;
   protected String className;
 
   boolean isDead = false;
   private static final Random rnd = new Random();
 
-  public BaseUnit(String name, int hp) {
+  public BaseUnit(String name) {
     this.name = name;
-    this.hp = hp;
-    this.maxHp = hp;
+
   }
 
   public BaseUnit() {
-    this(Names.getRandName(), 50);
+    this(Names.getRandName());
   }
 
   public String getName() {
@@ -71,7 +66,15 @@ public abstract class BaseUnit implements StepInfo {
   @Override
   public String toString() {
 
-      String str = String.format("Имя: %s; Класс: %s; Здоровье %d/%d ", this.name,this.className,this.hp,this.maxHp);
+      String str = String.format(" %s %s Здоровье: %d/%d Скорость: %d ", this.name,this.className,this.hp,this.maxHp,this.speed);
     return str;
   }
+
+  public int getSpeed() {
+    return this.speed;
+  }
+
+
+  
+  
 }
