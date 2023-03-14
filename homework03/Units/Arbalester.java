@@ -1,6 +1,8 @@
-package homework03.Units;
 
+package homework03.Units;
 import homework03.Names;
+
+
 
 public class Arbalester extends BaseUnit {
 
@@ -22,21 +24,48 @@ public class Arbalester extends BaseUnit {
     public Arbalester() {
         this(Names.getRandName());
     }
-    // public void shooting(BaseUnit target){
-    //     if (this.arrows>0){
-    //     this.arrows--;
-    //     float damade=12+(float)this.defence/10*BaseUnit.diceRoll();
-    //     System.out.println(this.name+" стреляет в "+target.getName());
-    //     target.getDamage((int)damade);
-    //    }
-    //    else System.out.println("Стрелы закончились!");
-    // }
+
+
+     public void shooting(BaseUnit target){
+         if (this.arrows>0){
+         this.arrows--;
+         int damade;
+         if (this.attack>=target.defence) {damade=this.damage[1];} 
+         else {damade=this.damage[0];}  
+
+         System.out.println(this.name+" стреляет в "+target.getName());
+         target.getDamage(damade);
+        }}
+
     
     @Override
     public String toString() {
         String str=super.toString()+ " стрел: "+this.arrows;
         return str;
     }
+// *Начать реализацию метода step у лучников.
+// 1. Если жизнь равна нулю или стрел нет, завершить обработку.
+// 2. Поиск среди противников наиболее приближённого.
+// 3. Нанести среднее повреждение найденному противнику.
+// 4. Найти среди своих крестьянина.
+// 5. Если найден завершить метод иначе уменьшить запас стрел на одну.
+// Степ лучника будет доделовать на следующем саминаре!)
+//  */
+    @Override
+    public void step() {
+        
+        if (this.hp==0 ) return;
+        else if (this.arrows==0) {
+            //findFreePeasant();
+        }
+        else{
+        //  findClTarget(team);
+        //  shooting(findClTarget(team));
+        }
+
+    }
+
+    
 
 
     
