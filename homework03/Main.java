@@ -1,11 +1,12 @@
 package homework03;
+import homework03.Comparators.SpeedComparator;
+import homework03.Units.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
-import homework03.Comparators.SpeedComparator;
-import homework03.Units.*;
+
 
 /**
 В материалы добавлены xml с полями и параметрами по умолчанию. Убедиться что все поля описанны. 
