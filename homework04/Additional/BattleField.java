@@ -14,19 +14,22 @@ public class BattleField {
     ArrayList<BaseUnit> team1=new ArrayList<>();
     ArrayList<BaseUnit> team2=new ArrayList<>();
 
-    //fillSpecialHeroesList(team1, 10,"Peasant, Raider, Sniper, Wizard",1);
-   // fillSpecialHeroesList(team2, 10,"Peasant, Spearman, Arbalester, Monk ",10);
-    BaseUnit vasya=new Arbalester("VASYA", 1, 1);
-    team1.add( vasya);
+    fillSpecialHeroesList(team1, 10,"Peasant, Raider, Sniper, Wizard",1);
+    fillSpecialHeroesList(team2, 10,"Peasant, Spearman, Arbalester, Monk ",10);
+    BaseUnit vasya=new Sniper("VASYA", 1, 1);
+    team1.set(0, vasya);
 
     //team1.sort(new SpeedComparator());
-   // team2.sort(new SpeedComparator());
+    //team2.sort(new SpeedComparator());
 
     System.out.println("Команда 1:");
     getListInfo(team1);
     System.out.println("Команда 2:");
     getListInfo(team2);
-
+    for (int i = 0; i < 15; i++) {
+       vasya.step(team1, team2);  
+    }
+   
     }
     
 
@@ -38,14 +41,14 @@ public class BattleField {
         int row=1;
         for (int i = 0; i < size; i++) {
             r=rand.nextInt(0,HerList.size());
-            if (HerList.get(r).equals("Peasant")){ list.add(new Peasant(0,0));}
-            else if (HerList.get(r).equals("Arbalester")){ list.add(new Arbalester("VASYA",column,row));}
+            if (HerList.get(r).equals("Peasant")){ list.add(new Peasant(column,row));}
+            else if (HerList.get(r).equals("Arbalester")){ list.add(new Arbalester(column,row));}
             else if (HerList.get(r).equals("Spearman")){ list.add(new Spearman(column,row));}
             else if (HerList.get(r).equals("Raider")){ list.add(new Raider(column,row));}
             else if (HerList.get(r).equals("Sniper")){ list.add(new Sniper(column,row));}
             else if (HerList.get(r).equals("Wizard")){ list.add(new Wizard(column,row));}
             else if (HerList.get(r).equals("Monk")){ list.add(new Monk(column,row));}
-            else System.out.println("присутствует неверный класс!");
+            else {System.out.println("присутствует неверный класс!");}
             row++;
         }
 }

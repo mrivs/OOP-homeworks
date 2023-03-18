@@ -43,10 +43,12 @@ public class Arbalester extends BaseUnit {
 
     @Override
     public void step (ArrayList<BaseUnit> friends,ArrayList<BaseUnit> ememies) {
-        
+        super.step(friends, ememies);
         if (!this.isDead){
             if (this.arrows<1){
+
                 this.findPeasant(friends);
+                return;
             }
             else{
                 int index=this.findTarget(ememies);
@@ -63,8 +65,10 @@ public class Arbalester extends BaseUnit {
         int targetInd = -1;
         double distanse = 100;
         double minDistanse = 100;
+        System.out.println(this.getName()+" ищет цель");
         for (int index = 0; index < ememies.size(); index++) {
             distanse = this.getDistanse(ememies.get(index));
+            //System.out.println(distanse+ " "+ememies.get(index).getName() );
             if (!ememies.get(index).isDead && distanse < minDistanse) {
                 targetInd = index;
                 minDistanse = distanse;
@@ -83,11 +87,12 @@ public class Arbalester extends BaseUnit {
             if (!unit.isDead && unit.className.equals("Крестьянин")) {
                 if (((Peasant) unit).delivery == true) {
                     ((Peasant) unit).deliveryArr();
+                    this.arrows+=3;
+                    return;
                 }
-                // ((Farmer) farm1).working();
-            }
+            }  
         }
-
+    System.out.println("свободных крестьян нет");
     }
 
     public void shooting(BaseUnit target) {

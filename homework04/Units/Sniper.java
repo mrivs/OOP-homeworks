@@ -15,7 +15,7 @@ public class Sniper extends Arbalester{
         this.maxHp=15;
         this.speed=9;
         this.className="Снайпер"; 
-        this.arrows=32;  
+        this.arrows=3;  
     }
 
     public Sniper(int x,int y) {

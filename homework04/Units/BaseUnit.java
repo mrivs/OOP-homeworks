@@ -58,7 +58,7 @@ public abstract class BaseUnit implements StepInfo {
   @Override
   public String toString() {
 
-      String str = String.format(" %s %s Здоровье: %d/%d Скорость: %d ", this.name,this.className,this.hp,this.maxHp,this.speed);
+      String str = String.format(" %s %s Здоровье: %d/%d Скорость: %d x %d y %d ", this.name,this.className,this.hp,this.maxHp,this.speed,this.position.getX(),this.position.getY());
     return str;
   }
 
@@ -72,13 +72,8 @@ public abstract class BaseUnit implements StepInfo {
 
 @Override
 public void step(ArrayList<BaseUnit> friends, ArrayList<BaseUnit> enemies) {
-  System.out.println(this.className+" ходит");
+  System.out.println(this.getName()+" ходит");
     
 }
 
-
-
-
-  
-  
 }

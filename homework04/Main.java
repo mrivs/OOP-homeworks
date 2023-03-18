@@ -1,12 +1,7 @@
 package homework04;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Random;
-
 import homework04.Additional.BattleField;
 
-import homework04.Units.*;
+
 
 /**
  Создать класс с описанием координат, x и y.
