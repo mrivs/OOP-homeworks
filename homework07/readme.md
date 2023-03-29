@@ -3,13 +3,21 @@
 
 BaseUnit --> Peasant 
 
+
 BaseUnit --> Infantry  --> Raider 
+
 BaseUnit --> Infantry  --> Spearman
 
+
+
 BaseUnit --> DistanseUnit --> Arbalester
+
 BaseUnit --> DistanseUnit --> Arbalester --> Sniper
 
+
+
 BaseUnit --> DistanseUnit --> Monk 
+
 BaseUnit --> DistanseUnit --> Monk --> Wizard
 
 
