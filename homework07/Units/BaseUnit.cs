@@ -37,8 +37,8 @@ public abstract class BaseUnit : StepInfo
 
     public virtual string getInfo()
     {
-        return string.Format(" {0}\t{1}\t⚔️  {2}\t\uD83D\uDEE1 {3}\t♥️ {4}%\t☠️  {5}\t ",
-        AdFormat.lenForm( this.className,12),AdFormat.lenForm(this.name,12), this.attack, this.defence, (this.hp * 100 / this.maxHp), (this.damage[0] + this.damage[1]) / 2);
+        return string.Format(" {0} {1} ⚔️  {2}\uD83D\uDEE1 {3} ♥️ {4} %  ☠️  {5} ",
+        AdFormat.lenForm( this.className,12), AdFormat.lenForm(this.name,12), this.attack, this.defence, (this.hp * 100 / this.maxHp), (this.damage[0] + this.damage[1]) / 2);
         // return String.format("\t%-12s\t⚔️  %-3d\t\uD83D\uDEE1 %-3d\t♥️ %-3d%%", , this.attack, this.defence, (this.hp * 100 / this.maxHp));
     }
 

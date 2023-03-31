@@ -91,13 +91,13 @@ public class ConsoleView
         String str = "";
 
         if (BattleField.team1[npcIndex].hp == 0)
-            str += "     " + AnsiColors.ANSI_RED + BattleField.team1[npcIndex].getInfo() + AnsiColors.ANSI_RESET;
+            str += "   " + AnsiColors.ANSI_RED + BattleField.team1[npcIndex].getInfo() + AnsiColors.ANSI_RESET;
         else
-            str += "     " + AnsiColors.ANSI_GREEN + BattleField.team1[npcIndex].getInfo() + AnsiColors.ANSI_RESET;
+            str += "   " + AnsiColors.ANSI_GREEN + BattleField.team1[npcIndex].getInfo() + AnsiColors.ANSI_RESET;
         if (BattleField.team2[npcIndex].hp == 0)
-            str += "     " + AnsiColors.ANSI_RED + BattleField.team2[npcIndex].getInfo() + AnsiColors.ANSI_RESET;
+            str += "   " + AnsiColors.ANSI_RED + BattleField.team2[npcIndex].getInfo() + AnsiColors.ANSI_RESET;
         else
-            str += "     " + AnsiColors.ANSI_BLUE + BattleField.team2[npcIndex].getInfo() + AnsiColors.ANSI_RESET;
+            str += "   " + AnsiColors.ANSI_BLUE + BattleField.team2[npcIndex].getInfo() + AnsiColors.ANSI_RESET;
 
         return str;
     }
